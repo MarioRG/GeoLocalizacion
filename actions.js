@@ -1,19 +1,11 @@
 $(document).ready(function ()
 {
   document.addEventListener("deviceready",function(){ 
-     var onSuccess = function(position)
-      {
-        initialize(position.coords.latitude,position.coords.longitude);
-      };
+     var onSuccess = function(position){initialize(position.coords.latitude,position.coords.longitude)};
       function onError(error) 
-      {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
-      }
+      {alert('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');}
       navigator.geolocation.getCurrentPosition(onSuccess,onError);
-  },
-    false
-   )
+  },false);
 });
 
 function initialize(lat,long){
