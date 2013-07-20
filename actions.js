@@ -10,7 +10,7 @@ $(document).ready(function ()
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
       }
-      navigator.geolocation.getCurrentPosition(onSuccess, onError);
+      navigator.geolocation.getCurrentPosition(onSuccess,onError);
   },
     false
    )
@@ -19,7 +19,7 @@ $(document).ready(function ()
 function initialize(lat,long){
 				var latlng = new google.maps.LatLng(lat,long);
 				var myOptions = {
-					zoom: 5,
+					zoom: 10,
 					center: latlng,
 					mapTypeId: google.maps.MapTypeId.ROADMAP
 				};
